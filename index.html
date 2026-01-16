@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Property Lawyers Melbourne | PCL Lawyers</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #000000;
+            --accent-color: #d4af37; /* Gold accent for professional look */
+            --text-color: #333;
+            --light-bg: #f4f4f4;
+            --white: #ffffff;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            line-height: 1.6;
+            color: var(--text-color);
+        }
+
+        /* --- Header & Navigation --- */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 90px;
+        }
+
+        .logo img {
+            height: 50px; /* Adjust based on your logo aspect ratio */
+            display: block;
+        }
+
+        .nav-links {
+            display: flex;
+            list-style: none;
+        }
+
+        .nav-links > li {
+            position: relative;
+            padding: 30px 15px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--primary-color);
+            font-weight: 600;
+            transition: 0.3s;
+            text-transform: uppercase;
+            font-size: 14px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Dropdown Menu */
+        .dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            background: var(--white);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            min-width: 250px;
+            list-style: none;
+            border-top: 3px solid var(--primary-color);
+        }
+
+        .nav-links li:hover .dropdown {
+            display: block;
+        }
+
+        .dropdown li a {
+            padding: 12px 20px;
+            display: block;
+            text-transform: none;
+            border-bottom: 1px solid #eee;
+        }
+
+        /* --- Hero Banner --- */
+        .hero {
+            height: 600px;
+            background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), 
+                        url('https://www.propertylawyersmelbourne.net.au/wp-content/uploads/2025/06/Home-banner.webp');
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--white);
+        }
+
+        .hero-content h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            max-width: 800px;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 15px 35px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            transition: 0.3s;
+            border: 2px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            background: transparent;
+            color: var(--white);
+        }
+
+        /* --- Sections --- */
+        section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+            font-size: 2.5rem;
+        }
+
+        /* About Us */
+        .about-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .about-image img {
+            width: 100%;
+            border-radius: 10px;
+            box-shadow: 10px 10px 0px var(--accent-color);
+        }
+
+        /* Why Choose Us */
+        .why-us {
+            background: var(--light-bg);
+        }
+
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .card {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+        }
+
+        .card i {
+            font-size: 40px;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+
+        /* Testimonials */
+        .testimonial-card {
+            background: var(--white);
+            padding: 30px;
+            border-left: 5px solid var(--accent-color);
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+
+        /* --- Footer --- */
+        footer {
+            background: var(--primary-color);
+            color: var(--white);
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-grid h3 {
+            margin-bottom: 20px;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-links {
+            list-style: none;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #ccc;
+            text-decoration: none;
+        }
+
+        .social-icons a {
+            color: var(--white);
+            font-size: 24px;
+            margin-right: 15px;
+            transition: 0.3s;
+        }
+
+        .social-icons a:hover {
+            color: var(--accent-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #333;
+            font-size: 14px;
+            color: #888;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .nav-links { display: none; }
+            .about-container { grid-template-columns: 1fr; }
+            .hero-content h1 { font-size: 2rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container">
+            <nav>
+                <a href="https://www.propertylawyersmelbourne.net.au/" class="logo">
+                    <img src="Property Lawyers Melbourne.png" alt="PCL Lawyers Logo">
+                </a>
+                <ul class="nav-links">
+                    <li><a href="https://www.propertylawyersmelbourne.net.au/">Home</a></li>
+                    <li>
+                        <a href="#">Services <i class="fas fa-chevron-down" style="font-size: 10px;"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="https://www.propertylawyersmelbourne.net.au/commercial-leasing/">Commercial Leasing</a></li>
+                            <li><a href="https://www.propertylawyersmelbourne.net.au/conveyancing/">Conveyancing</a></li>
+                            <li><a href="https://www.propertylawyersmelbourne.net.au/building-construction-lawyers/">Building & Construction</a></li>
+                            <li><a href="https://www.propertylawyersmelbourne.net.au/compulsory-acquisition-of-land/">Compulsory Acquisition</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="https://www.propertylawyersmelbourne.net.au/blog/">Blog</a></li>
+                    <li><a href="https://www.propertylawyersmelbourne.net.au/contact-us/">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Expert Property Lawyers & Conveyancers in Melbourne</h1>
+                <p style="font-size: 1.2rem; margin-bottom: 30px;">Securing your real estate investments with strategic legal advice.</p>
+                <a href="https://www.propertylawyersmelbourne.net.au/contact-us/" class="btn">Book a Consultation</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <div class="about-container">
+                <div class="about-text">
+                    <h2 style="margin-bottom: 20px; color: var(--primary-color;); text-align: justify;">Conveyancer and Property Lawyer in Melbourne: Secure & Simplify Your Real-estate Investment!</h2>
+<p>PCL Lawyers is a reliable legal service in Melbourne, renowned for our experienced <a title="conveyancer and property lawyer" href="https://www.propertylawyersmelbourne.net.au/" target="_blank">conveyancer and property lawyer</a> who can navigate the complexities of real estate, secure your investment and simplify the property transaction process. We provide comprehensive support, ensuring your property purchase, sale, or lease is seamless and legally sound.</p> <br>
+<p>We offer strong and seamless lease drafting for the <a title="new lease landlord" href="https://www.propertylawyersmelbourne.net.au/commercial-leasing/new-lease-landlord/" target="_blank">new lease landlord</a> to protect residential assets and commercial interests. We have dedicated experts for real estate transactions that extend to strategic <a title="retail lease negotiation" href="https://www.propertylawyersmelbourne.net.au/commercial-leasing/lease-negotiation/" target="_blank">retail lease negotiation</a>, where we advocate fiercely to secure favourable terms on critical issues like rent reviews, fit-out contributions, and maintenance obligations. We also expertly manage the <a title="transfer of leases" href="https://www.propertylawyersmelbourne.net.au/commercial-leasing/assignments-of-lease/" target="_blank">transfer of leases</a>, facilitating smooth transitions for both incoming and outgoing tenants to minimise disruption and liability.</p><br>
+<p>At PCL Lawyers, we serve our clients with more than a seamless transaction. Our expert real estate advisors offer clarity on regulations and act strategically to create proactive solutions and prevent potential disputes.</p>
+                   
+                </div>
+                <div class="about-image">
+                    <img src="https://www.propertylawyersmelbourne.net.au/wp-content/uploads/2023/04/Property-Lawyers-960x760.jpg" alt="Property Lawyers">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="why-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Property Lawyers Melbourne?</h2>
+            <div class="grid-3">
+                <div class="card">
+                    <i class="fas fa-gavel"></i>
+                    <h3>Expert Advocacy</h3>
+                    <p>We advocate fiercely to secure favourable terms on issues like rent reviews and maintenance obligations.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-handshake"></i>
+                    <h3>Seamless Transitions</h3>
+                    <p>We expertly manage the transfer of leases, facilitating smooth transitions for incoming and outgoing tenants.</p>
+                </div>
+                <div class="card">
+                    <i class="fas fa-shield-alt"></i>
+                    <h3>Strategic Solutions</h3>
+                    <p>Our advisors act strategically to create proactive solutions and prevent potential legal disputes.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="container">
+            <h2 class="section-title">Client Testimonials</h2>
+            <div class="grid-3">
+                <div class="testimonial-card">
+                    "Property Lawyers Melbourne made my commercial lease negotiation incredibly easy. They caught things I would have missed!"
+                    <br><br><strong>- Michael R.</strong>
+                </div>
+                <div class="testimonial-card">
+                    "Highly professional conveyancing services. They kept me informed throughout the entire property purchase."
+                    <br><br><strong>- Sarah J.</strong>
+                </div>
+                <div class="testimonial-card">
+                    "The best property lawyers in Melbourne. Their advice on compulsory land acquisition was invaluable."
+                    <br><br><strong>- David L.</strong>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div>
+                    <h3>Contact Us</h3>
+                    <p>Level 14, 90 Collins Street,<br>Melbourne VIC 3000</p>
+                   <p style="margin-top: 10px;">
+  <strong>
+    <a href="tel:1300907335" style="color:#ffffff; text-decoration:none;">
+      Call: 1300 907 335
+    </a>
+  </strong>
+</p>
+
+
+                </div>
+                <div>
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="https://www.propertylawyersmelbourne.net.au/">Home</a></li>
+                        <li><a href="https://www.propertylawyersmelbourne.net.au/commercial-leasing/">Commercial Leasing</a></li>
+                        <li><a href="https://www.propertylawyersmelbourne.net.au/conveyancing/">Conveyancing</a></li>
+                        <li><a href="https://www.propertylawyersmelbourne.net.au/blog/">Blog</a></li>
+                        <li><a href="https://www.propertylawyersmelbourne.net.au/contact-us/">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h3>Follow Us</h3>
+                    <div class="social-icons">
+                        <a href="https://www.facebook.com/PCL-Lawyers-108153577300515" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a href="https://au.linkedin.com/company/pcl-lawyers" target="_blank"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="footer-bottom">
+                &copy; 2026 Property Lawyers Melbourne. All Rights Reserved. Property Lawyers Melbourne.
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
